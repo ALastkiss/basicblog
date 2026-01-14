@@ -43,31 +43,56 @@ Pastikan Git sudah terinstall, lalu jalankan perintah:
 ```bash
 git clone [https://github.com/ALastkiss/basicblog.git](https://github.com/ALastkiss/basicblog.git)
 cd basicblog
-# 2. Install dependensi PHP & JavaScript
+````
+### 2. Install Dependensi
+Install library PHP dan aset JavaScript:
+```bash
 composer install
 npm install
-
-# 3. Konfigurasi environment
-cp .env.example .env
-
-# Edit file .env dan sesuaikan database
-DB_CONNECTION=mysql
+````
+### 3. Konfigurasi environment
+Karena file .env tidak disertakan dalam repository (alasan keamanan), Anda perlu membuatnya dari file contoh:
+Bash
+`cp .env.example .env`
+Buka file .env tersebut, dan sesuaikan pengaturan database Anda:
+Ini, TOML
+`DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
 DB_DATABASE=nama_database_anda
 DB_USERNAME=root
-DB_PASSWORD=
-
-# 4. Generate application key
+DB_PASSWORD=`
+### 4. Generate App Key
+```Bash
 php artisan key:generate
-
-# 5. Migrasi database
+````
+### 5. Migrasi Database
+Pastikan Anda sudah membuat database kosong di MySQL, lalu jalankan migrasi tabel:
+````Bash
 php artisan migrate
-
-# 6. Buat symbolic link storage
-php artisan storage:link
-
-# 7. Jalankan aplikasi (gunakan 2 terminal)
+````
+### 6. Symbolic Link Storage
+Agar gambar yang diupload bisa tampil di halaman publik, jalankan perintah ini:
+Bash
+````php artisan storage:link
+````
+### 7. Build Assets & Jalankan Server
+Buka dua terminal berbeda untuk menjalankan perintah berikut:
+Terminal 1 (Compile CSS/JS):
+````Bash
 npm run dev
+````
+### Terminal 2 (Jalankan Server Laravel):
+````Bash
 php artisan serve
+````
+Aplikasi sekarang dapat diakses di: `http://127.0.0.1:8000`
 
+###👨‍💻 Identitas Pengembang
+Proyek ini disusun oleh:
+Nama: Mustafa Bilal
+NIM: C2383207008
+Program Studi: PTI
+Universitas: Universitas Muhammadiyah Tasikmalaya
+
+© 2026 BlogBilal - All Rights Reserved.
