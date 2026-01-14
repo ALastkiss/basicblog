@@ -73,8 +73,8 @@ php artisan migrate
 ````
 ### 6. Symbolic Link Storage
 Agar gambar yang diupload bisa tampil di halaman publik, jalankan perintah ini:
-Bash
-````php artisan storage:link
+````Bash
+php artisan storage:link
 ````
 ### 7. Build Assets & Jalankan Server
 Buka dua terminal berbeda untuk menjalankan perintah berikut:
@@ -88,11 +88,11 @@ php artisan serve
 ````
 Aplikasi sekarang dapat diakses di: `http://127.0.0.1:8000`
 
-###👨‍💻 Identitas Pengembang
+### Identitas Pengembang
 Proyek ini disusun oleh:
-Nama: Mustafa Bilal
-NIM: C2383207008
-Program Studi: PTI
-Universitas: Universitas Muhammadiyah Tasikmalaya
+-Nama: Mustafa Bilal
+-NIM: C2383207008
+-Program Studi: PTI
+-Universitas: Universitas Muhammadiyah Tasikmalaya
 
-© 2026 BlogBilal - All Rights Reserved.
+# © 2026 BlogBilal - All Rights Reserved.
