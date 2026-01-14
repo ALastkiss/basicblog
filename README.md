@@ -43,3 +43,31 @@ Pastikan Git sudah terinstall, lalu jalankan perintah:
 ```bash
 git clone [https://github.com/ALastkiss/basicblog.git](https://github.com/ALastkiss/basicblog.git)
 cd basicblog
+# 2. Install dependensi PHP & JavaScript
+composer install
+npm install
+
+# 3. Konfigurasi environment
+cp .env.example .env
+
+# Edit file .env dan sesuaikan database
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=nama_database_anda
+DB_USERNAME=root
+DB_PASSWORD=
+
+# 4. Generate application key
+php artisan key:generate
+
+# 5. Migrasi database
+php artisan migrate
+
+# 6. Buat symbolic link storage
+php artisan storage:link
+
+# 7. Jalankan aplikasi (gunakan 2 terminal)
+npm run dev
+php artisan serve
+
